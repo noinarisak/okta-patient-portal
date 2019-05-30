@@ -1,0 +1,17 @@
+version: '3.5'
+
+services:
+
+  web:
+    image: web
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/usr/src/app'
+    ports:
+      - 5002:5000
+    env_file:
+      - .env
+    environment:
+      - SITE_APP_LOGO=images/logo_${SITE_SKIN}.png

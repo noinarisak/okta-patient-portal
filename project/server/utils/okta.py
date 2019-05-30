@@ -1,6 +1,6 @@
 import base64
 
-from utils.rest import RestUtil
+from project.server.utils.rest import RestUtil
 
 
 class OktaAuth:
